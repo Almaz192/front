@@ -1,0 +1,102 @@
+.header {
+    width: 100%;
+    display: flex;
+    padding: 15px 0px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.container {
+    width: 70%;
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    background-color: white;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 44px;
+    margin-left: 0;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+.nav ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    color: black;
+}
+.nav ul li a:hover {
+    color: #93a27c;
+}
+.nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    background-color: white;
+    border-radius: 18px;
+    height: 44px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav ul li {
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.icons {
+    display: flex;
+    gap: 24124214215px;
+    align-items: center;
+}
+
+.icons img {
+    width: 44px;
+    height: 44px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.iconWrapper {
+    width: 44px;
+    height: 44px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.iconWrapper img {
+    width: 20px;
+    height: 20px;
+}
+.iconWrapper:last-child {
+    margin-right: 0;
+}
