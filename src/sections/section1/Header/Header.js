@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./Header.module.css";
-import Logo from "../../assets/images/Logo.png";
-import BagIcon from "../../assets/images/Bag.png";
-import UserIcon from "../../assets/images/User.png";
-import MenuIcon from "../../assets/images/Menu.png";
+import Logo from "../../../assets/images/Logo.png";
+import BagIcon from "../../../assets/images/Bag.png";
+import UserIcon from "../../../assets/images/User.png";
+import MenuIcon from "../../../assets/images/Menu.png";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./HeroSection.module.css";
 import SearchBar from "../SearchBar/SearchBar";
-import BackgroundImage from "../../assets/images/Background-image.png";
+import BackgroundImage from "../../../assets/images/Background-image.png";
 
 const HeroSection = () => {
     return (
