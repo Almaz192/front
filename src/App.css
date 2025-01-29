@@ -18,7 +18,7 @@ body {
 
 /* ✅ Main Content Wrapper */
 .app-container {
-    width: 80%; /* Controls overall site width */
+    width: 90%; /* Controls overall site width */
     max-width: 1400px; /* Prevents it from being too wide */
     margin: 0 auto; /* Centers the layout */
     display: flex;

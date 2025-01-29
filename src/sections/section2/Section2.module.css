@@ -1,50 +1,78 @@
 .section2 {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.overlay {
     width: 100%;
-    min-height: 100vh; /* Full page height */
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content */
-    justify-content: center;
-    padding: 60px 10vw; /* Space from the edges */
-    box-sizing: border-box;
+    align-items: center;
 }
 
 .title {
-    font-size: clamp(24px, 8vw, 40px);
+    font-size: 3.125rem;
     font-weight: 700;
     font-family: "Montserrat Alternates", sans-serif;
     text-align: left;
-    max-width: 1300px;
-    margin-bottom: 40px; /* Space before blocks */
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 .blockContainer {
     display: flex;
-    justify-content: center; /* Center the blocks */
-    align-items: center; /* Align items in center */
+    justify-content: space-between;
+    align-items: center;
     gap: 20px;
     width: 100%;
-    max-width: 1300px; /* Ensures proper centering */
 }
 
 .greenBlock {
     background-color: #93a27c;
-    width: 525px; /* Exact size */
-    height: 503px; /* Exact size */
+    width: 600px; /* Increased width */
+    height: 420px; /* Reduced height */
     border-radius: 18px;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    justify-content: left;
+    justify-content: flex-end;
     padding: 30px;
     color: white;
     font-size: 16px;
     line-height: 1.5;
     text-align: left;
+    position: relative;
+    text-indent: 35px;
+}
+
+/* White line */
+.greenBlock::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 112px;
+    left: 30px;
+}
+
+/* Hide bold text on larger screens */
+.greenBlock .mobileOnly {
+    display: none;
 }
 
 .imageBlock {
-    width: 742px; /* Exact size */
-    height: 503px;
+    width: 800px; /* Match greenBlock */
+    height: 420px; /* Match greenBlock */
     border-radius: 18px;
     overflow: hidden;
     position: relative;
@@ -61,39 +89,83 @@
 
 .buttonContainer {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 50%;
 }
 
-/* ✅ Responsive Fixes */
+/* Responsive Adjustments */
 @media (max-width: 1200px) {
-    .blockContainer {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-
     .greenBlock,
     .imageBlock {
-        width: 100%;
-        max-width: 700px;
-        height: auto;
+        width: 90%;
+    }
+    .greenBlock::before {
+        display: none;
     }
 }
-
 @media (max-width: 768px) {
     .section2 {
-        padding: 40px 5vw;
+        padding: 20px 0; /* ✅ Reduce vertical padding */
+    }
+
+    .overlay {
+        width: 80%;
+        padding-top: 0; /* ✅ Remove top padding */
     }
 
     .title {
-        text-align: center; /* Center the title on small screens */
-        max-width: 100%;
+        text-align: left;
+        font-size: 2rem;
+        width: 100%;
+        margin-top: 0; /* ✅ Ensure no extra space */
+        margin-bottom: 20px; /* ✅ Reduce bottom margin */
+    }
+
+    .blockContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* ✅ Reduce gap */
     }
 
     .greenBlock,
     .imageBlock {
         width: 100%;
-        max-width: 90%;
+        height: auto;
+    }
+
+    .greenBlock {
+        font-size: 0.85rem;
+        height: auto;
+        padding: 20px; /* ✅ Reduce padding inside */
+        text-indent: 0px;
+    }
+
+    .greenBlock .mobileOnly {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    /* ✅ Button Stretches & Centers Inside ImageBlock */
+    .buttonContainer {
+        position: absolute;
+        bottom: 20%; /* ✅ Center Vertically */
+        left: 50%; /* ✅ Center Horizontally */
+        transform: translate(-50%, 50%); /* ✅ Perfect Centering */
+        width: 80%; /* ✅ Button Stretches */
+        max-width: 350px; /* ✅ Prevents Too Wide */
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttonContainer .button {
+        width: 100%;
+        height: 50px; /* ✅ Taller for Mobile */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 28px; /* ✅ Rounded on Mobile */
+        font-size: 1rem;
     }
 }

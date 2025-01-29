@@ -41,7 +41,7 @@ html {
     font-size: clamp(32px, 4vw, 60px);
     color: white;
     font-weight: 700;
-    max-width: 740px;
+    max-width: 700px;
     font-family: "Montserrat Alternates", sans-serif !important;
 }
 

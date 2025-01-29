@@ -2,65 +2,94 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white; /* Default background */
+    background-color: white;
     color: black;
-    padding: 0 16px; /* Adjusted padding */
+    padding: 0 16px;
     border: none;
-    border-radius: 18px; /* Smooth button shape */
+    border-radius: 18px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     font-weight: 500;
     font-family: "Montserrat", sans-serif;
     width: fit-content;
-    height: 48px; /* Set height to match search bar */
-    min-width: 180px; /* Ensure button width is stable */
+    height: 48px;
+    min-width: 260px;
     display: flex;
     flex-direction: row;
     gap: 10px;
     text-align: left;
-    max-width: 230px; /* Ensuring stretch with Search Bar */
+    max-width: 230px;
 }
 
-/* ✅ Green Block Always Visible & Squared */
+/* ✅ Default Arrow */
 .button .arrowContainer {
     width: 40px;
     height: 40px;
-    background-color: #93a27c; /* Green */
+    background-color: #93a27c;
     border-radius: 14px;
     display: flex;
     margin-right: -10px;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* ✅ Arrow is ALWAYS Visible & WHITE */
+/* ✅ Arrow Image Transition */
 .button .arrowContainer img {
     width: 16px;
     height: 16px;
     object-fit: contain;
     opacity: 1;
-    filter: brightness(0) invert(1); /* Ensures WHITE arrow */
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-/* ✅ Hover Effect */
+/* ✅ Rounded Button */
+.roundedButton {
+    border-radius: 28px !important;
+    padding: 0 24px;
+}
+
+/* ✅ Rounded Arrow */
+.roundedButton .arrowContainer {
+    border-radius: 50% !important;
+    margin-right: -17px !important;
+}
+
+/* ✅ Extra Gap Between Text & Arrow */
+.gapButton {
+    gap: 70px !important; /* More space between text & arrow */
+}
+
+/* ✅ Hover Effect with Smooth Transition */
 .button:hover {
     background-color: #93a27c;
     color: white;
 }
 
+/* ✅ Smooth Hover Animation for Arrow */
 .button:hover .arrowContainer {
     background-color: white;
+    transform: scale(1.1);
 }
 
 .button:hover .arrowContainer img {
-    filter: brightness(0) invert(0); /* Turns arrow black on hover */
+    filter: brightness(0) invert(0);
+    transform: rotate(360deg);
 }
+
 @media (max-width: 768px) {
     .button {
-        width: 100%; /* Stretches like search bar */
-        max-width: 400px; /* Ensures consistency */
+        width: 100% !important; /* ✅ Makes the button fill the card width */
+        max-width: unset; /* ✅ Removes max-width restriction */
+        height: 50px; /* ✅ Adjust height for better appearance */
+        justify-content: center; /* ✅ Centers text & arrow */
+    }
+
+    .button .arrowContainer {
+        position: absolute; /* ✅ Keeps arrow aligned */
+        right: 10px; /* ✅ Moves arrow to right edge */
     }
 }

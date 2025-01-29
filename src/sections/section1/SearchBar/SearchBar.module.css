@@ -1,11 +1,11 @@
 .searchContainer {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
     justify-content: flex-start; /* Keep left alignment */
     flex-wrap: wrap;
     width: 100%;
-    max-width: 600px; /* Ensures both elements have the same width */
+    max-width: 650px; /* Ensures both elements have the same width */
 }
 
 /* ✅ Input Field */
@@ -60,7 +60,7 @@
     }
 
     .searchInput {
-        width: 88%;
+        width: 100%;
         max-width: 300px;
     }
     .searchButton {

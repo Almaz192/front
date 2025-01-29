@@ -1,0 +1,49 @@
+.cardSection {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 60px 5%;
+    background-color: #faf5f1; /* ✅ Corrected Background Color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.sectionTitle {
+    font-size: 3.125rem;
+    font-weight: 700;
+    font-family: "Montserrat Alternates", sans-serif;
+    text-align: left;
+    width: 73%;
+    margin-bottom: 40px;
+}
+.sectionTitle span {
+    color: #b28b5b;
+    font-weight: 600;
+}
+
+/* ✅ Flexbox for Desktop */
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1400px;
+}
+
+/* ✅ Grid Layout for Mobile */
+@media (max-width: 768px) {
+    .cardContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+        text-align: left;
+    }
+}
