@@ -4,12 +4,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Arial", sans-serif;
 }
 
 body {
+    font-family: "Montserrat", sans-serif; /* Default font */
     background-color: #f9f9f9;
     color: #333;
+    width: 100%;
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
 }
 
 .app-container {

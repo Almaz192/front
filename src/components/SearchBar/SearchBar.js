@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./SearchBar.module.css";
-import ArrowIcon from "../../assets/images/Arrow.png";
+import Button from "../Button1/Button"; // Using the new button component
 
 const SearchBar = () => {
     return (
@@ -10,12 +10,10 @@ const SearchBar = () => {
                 placeholder="Найти..."
                 className={styles.searchInput}
             />
-            <button className={styles.searchButton}>
-                Заказать звонок
-                <div className={styles.arrowContainer}>
-                    <img src={ArrowIcon} alt="Arrow Icon" />
-                </div>
-            </button>
+            <Button
+                label="Заказать звонок"
+                onClick={() => alert("Calling...")}
+            />
         </div>
     );
 };

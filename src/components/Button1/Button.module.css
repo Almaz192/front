@@ -1,0 +1,66 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white; /* Default background */
+    color: black;
+    padding: 0 16px; /* Adjusted padding */
+    border: none;
+    border-radius: 18px; /* Smooth button shape */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    width: fit-content;
+    height: 48px; /* Set height to match search bar */
+    min-width: 180px; /* Ensure button width is stable */
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    text-align: left;
+    max-width: 230px; /* Ensuring stretch with Search Bar */
+}
+
+/* ✅ Green Block Always Visible & Squared */
+.button .arrowContainer {
+    width: 40px;
+    height: 40px;
+    background-color: #93a27c; /* Green */
+    border-radius: 14px;
+    display: flex;
+    margin-right: -10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* ✅ Arrow is ALWAYS Visible & WHITE */
+.button .arrowContainer img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    opacity: 1;
+    filter: brightness(0) invert(1); /* Ensures WHITE arrow */
+}
+
+/* ✅ Hover Effect */
+.button:hover {
+    background-color: #93a27c;
+    color: white;
+}
+
+.button:hover .arrowContainer {
+    background-color: white;
+}
+
+.button:hover .arrowContainer img {
+    filter: brightness(0) invert(0); /* Turns arrow black on hover */
+}
+@media (max-width: 768px) {
+    .button {
+        width: 100%; /* Stretches like search bar */
+        max-width: 400px; /* Ensures consistency */
+    }
+}

@@ -1,7 +1,7 @@
 .header {
     width: 100%;
     display: flex;
-    padding: 15px 0px;
+    padding: 15px 0;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px; /* Ensure spacing between logo and nav */
 }
 
 .logo {
@@ -26,29 +27,15 @@
     justify-content: center;
     width: 110px;
     height: 44px;
-    margin-left: 0;
 }
 
-.logo img {
-    width: 100%;
-    height: 100%;
-}
-
+/* Desktop Nav (Hidden on Mobile) */
 .nav {
     display: flex;
     justify-content: center;
     flex-grow: 1;
 }
-.nav ul li a {
-    font-size: 16px;
-    font-weight: 400;
-    font-family: "Open Sans", sans-serif;
-    text-decoration: none;
-    color: black;
-}
-.nav ul li a:hover {
-    color: #93a27c;
-}
+
 .nav ul {
     display: flex;
     gap: 30px;
@@ -67,20 +54,105 @@
     justify-content: center;
     height: 100%;
 }
-.icons {
-    display: flex;
-    gap: 24124214215px;
-    align-items: center;
+
+.nav ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    color: black;
 }
 
-.icons img {
+.nav ul li a:hover {
+    color: #93a27c;
+    transition: 0.2s ease-in-out;
+}
+
+/* Hides Nav on Mobile */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: flex !important;
+    }
+}
+
+/* Mobile Menu Icon */
+/* Menu Icon (Mobile) */
+.mobileMenu {
+    display: none;
     width: 44px;
     height: 44px;
     background-color: white;
-    padding: 10px;
-    border-radius: 12px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
+
+/* Hover Effect (Same as Bag & User Icons) */
+.mobileMenu:hover {
+    background-color: #93a27c;
+}
+
+.mobileMenu:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.mobileMenu img {
+    width: 20px;
+    height: 20px;
+}
+
+.mobileNav {
+    position: fixed;
+    bottom: -100%; /* Hidden initially */
+    left: 0;
+    width: 100%;
+    background: white;
+    border-radius: 20px 20px 0 0;
+    padding: 20px 0;
+    text-align: center;
+    transition: bottom 0.4s ease-in-out;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Open State (Slide Up) */
+.mobileNav.open {
+    bottom: 0;
+}
+
+/* Mobile Menu Items */
+.mobileNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobileNav ul li {
+    padding: 12px 0;
+}
+
+.mobileNav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Icons Section */
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ensures perfect centering */
+    gap: 10px; /* Adjusted for uniform spacing */
+    width: auto; /* Remove fixed width */
+}
+
 .iconWrapper {
     width: 44px;
     height: 44px;
@@ -90,13 +162,19 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin-right: 15px;
+    transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-.iconWrapper img {
-    width: 20px;
-    height: 20px;
-}
-.iconWrapper:last-child {
+/* Remove margin inconsistencies */
+.iconWrapper:not(:last-child) {
     margin-right: 0;
+}
+
+/* Hover effect */
+.iconWrapper:hover {
+    background-color: #93a27c;
+}
+
+.iconWrapper:hover img {
+    filter: brightness(0) invert(1);
 }

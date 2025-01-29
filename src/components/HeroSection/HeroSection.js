@@ -11,7 +11,7 @@ const HeroSection = () => {
         >
             <div className={styles.overlay}>
                 <h1 className={styles.title}>
-                    Ваш путеводитель <br /> в области сырья
+                    Ваш путеводитель в области сырья
                 </h1>
                 <SearchBar />
             </div>

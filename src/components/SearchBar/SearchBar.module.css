@@ -1,79 +1,70 @@
 .searchContainer {
     display: flex;
     align-items: center;
-    gap: 15px;
-    justify-content: flex-start;
-    flex-wrap: wrap; /* Ensure it wraps properly on small screens */
+    gap: 10px;
+    justify-content: flex-start; /* Keep left alignment */
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 600px; /* Ensures both elements have the same width */
 }
 
+/* ✅ Input Field */
 .searchInput {
-    width: clamp(250px, 50%, 450px);
-    padding: 15px;
+    flex: 1; /* Allows it to stretch */
+    padding: 10px 15px;
     border: 3px solid transparent;
     font-family: "Open Sans", sans-serif;
-    border-radius: 18px;
+    border-radius: 12px;
     font-size: 16px;
-    height: 48px;
     outline: none;
     transition: border-color 0.3s ease-in-out;
+    text-align: left;
+    width: 100%; /* Ensures it stretches */
 }
 
 .searchInput:focus {
     border-color: #93a27c;
 }
 
+/* ✅ Button */
 .searchButton {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    color: black;
-    padding: 10px 12px 10px 18px;
-    border: none;
-    border-radius: 18px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease-in-out;
-    height: 48px;
-    font-weight: 500;
-    gap: 10px;
-    font-family: "Montserrat", sans-serif;
-    width: auto;
-}
-
-.searchButton:hover {
-    background-color: #93a27c;
-    color: white;
-}
-
-.searchButton:hover .arrowContainer {
-    background-color: white;
-}
-
-.searchButton:hover .arrowContainer img {
-    content: url("../../assets/images/Arrow-hover.png");
-}
-
-.searchButton img {
-    width: 30px;
-    height: 30px;
-    padding: 2px;
-}
-.arrowContainer {
-    width: 36px;
-    height: 36px;
-    background-color: #93a27c;
+    flex: 1; /* Allows it to stretch */
+    padding: 10px 15px;
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    padding: 0px;
-    margin-right: -5px;
+    font-size: 16px;
+    width: 100%; /* Ensures it stretches */
 }
 
-.arrowContainer img {
-    width: 40%;
-    height: 40%;
-    object-fit: contain;
+/* ✅ Ensure Both Have the Same Size */
+@media (max-width: 842px) {
+    .searchContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 300px; /* Keep everything aligned */
+        gap: 10px;
+    }
+
+    .searchInput,
+    .searchButton {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .searchContainer {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .searchInput {
+        width: 88%;
+        max-width: 300px;
+    }
+    .searchButton {
+        width: 100%;
+        max-width: 300px; /* Ensures same width */
+    }
 }
