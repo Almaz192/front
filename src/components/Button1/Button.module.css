@@ -21,7 +21,6 @@
     text-align: left;
 }
 
-/* ✅ Default Arrow */
 .button .arrowContainer {
     width: 40px;
     height: 40px;
@@ -32,46 +31,41 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added smooth transition */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* ✅ Arrow Image Transition */
 .button .arrowContainer img {
     width: 16px;
     height: 16px;
     object-fit: contain;
     opacity: 1;
     filter: brightness(0) invert(1);
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transition for image */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-/* ✅ Rounded Arrow & Button ONLY for Section2 */
 .roundedButton {
     border-radius: 28px !important;
     padding: 0 24px;
 }
 
-/* ✅ Rounded Arrow ONLY for Section2 */
 .roundedArrow {
     border-radius: 50% !important;
     margin-right: -17px !important;
 }
 
-/* ✅ Hover Effect with Smooth Transition */
 .button:hover {
     background-color: #93a27c;
     color: white;
 }
 
-/* ✅ Smooth Hover Animation for Arrow */
 .button:hover .arrowContainer {
     background-color: white;
-    transform: scale(1.1); /* Slightly enlarges the arrow container */
+    transform: scale(1.1);
 }
 
 .button:hover .arrowContainer img {
     filter: brightness(0) invert(0);
-    transform: rotate(360deg); /* Rotates the arrow smoothly */
+    transform: rotate(360deg);
 }
 
 @media (max-width: 768px) {

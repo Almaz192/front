@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./SearchBar.module.css";
-import Button from "../../../components/Button1/Button"; // Using the new button component
+import Button from "../../../components/Button1/Button";
 
 const SearchBar = () => {
     return (

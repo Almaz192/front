@@ -8,7 +8,7 @@ const Card = ({ image, title }) => {
             <img src={image} alt={title} className={styles.cardImage} />
             <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>{title}</h3>
-                {/* ✅ Button2 Component */}
+                {}
                 <div className={styles.buttonContainer}>
                     <Button2 label="Подробнее" />
                 </div>

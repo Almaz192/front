@@ -16,7 +16,6 @@
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* ✅ Properly positions the arrow */
 .button .arrowContainer {
     width: 40px;
     height: 40px;
@@ -26,7 +25,7 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    margin-left: auto; /* Automatically pushes it to the end */
+    margin-left: auto;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .arrowContainer {
@@ -42,13 +41,11 @@
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-/* ✅ Ensure correct alignment with padding fixes */
 .button span {
     flex-grow: 1;
     text-align: center;
 }
 
-/* ✅ Hover Effects */
 .button:hover {
     background-color: #93a27c;
     color: white;
@@ -66,7 +63,7 @@
 
 @media (max-width: 768px) {
     .button {
-        font-size: 11px; /* ✅ Decreased button text size */
+        font-size: 11px;
         padding: 0 15px;
     }
 

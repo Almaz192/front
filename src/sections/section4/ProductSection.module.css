@@ -20,11 +20,11 @@
 
 .buttonWrapper {
     min-width: 190px;
-    max-width: 250px; /* Limits the button width */
+    max-width: 250px;
 }
 
 .buttonWrapper button {
-    width: 100%; /* Makes the button responsive within its container */
+    width: 100%;
 }
 
 .sectionTitle {
@@ -54,10 +54,9 @@
     max-width: 300px;
 }
 
-/* Responsive Design for Different Resolutions */
 @media (max-width: 1200px) {
     .productCard {
-        flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+        flex: 1 1 calc(50% - 20px);
     }
 }
 
@@ -73,19 +72,21 @@
     }
 
     .productCard {
-        flex: 1 1 calc(50% - 10px); /* Ensures 2 cards per row under 768px */
+        flex: 1 1 calc(50% - 10px);
         min-width: 200px;
     }
 }
 
 @media (max-width: 585px) {
     .productGrid {
-        justify-content: center; /* Center cards if extra space */
+        justify-content: center;
     }
-
+    .sectionTitle {
+        font-size: 2rem;
+    }
     .productCard {
-        flex: 1 1 calc(50% - 10px); /* 2 cards per row under 585px */
-        min-width: 150px; /* Reduce minimum width for better fit */
+        flex: 1 1 calc(50% - 10px);
+        min-width: 150px;
         max-width: 200px;
     }
 }

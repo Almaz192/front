@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./ProductSection.module.css";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import Pagination from "../../components/Pagination/Pagination";
-import Button2 from "../../components/Button2/Button2"; // ✅ Import Button2 component
+import Button2 from "../../components/Button2/Button2";
 
 import ProductImage1 from "../../assets/images/Product-image1.png";
 import ProductImage2 from "../../assets/images/Product-image2.png";

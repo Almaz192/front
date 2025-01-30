@@ -7,9 +7,8 @@ import MenuIcon from "../../../assets/images/Menu.png";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const menuRef = useRef(null); // Reference to mobile menu
+    const menuRef = useRef(null);
 
-    // Close the menu when clicking outside of it
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -29,14 +28,11 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.container}>
-                {/* Logo */}
                 <div className={styles.logo}>
                     <a href="/">
                         <img src={Logo} alt="Food Land Logo" />
                     </a>
                 </div>
-
-                {/* Desktop Navigation (Hidden on Mobile) */}
                 <nav
                     className={`${styles.nav} ${menuOpen ? styles.hidden : ""}`}
                 >
@@ -56,7 +52,6 @@ const Header = () => {
                     </ul>
                 </nav>
 
-                {/* Icons */}
                 <div className={styles.icons}>
                     <div className={styles.iconWrapper}>
                         <img src={BagIcon} alt="Shopping Bag" />
@@ -65,7 +60,6 @@ const Header = () => {
                         <img src={UserIcon} alt="User Profile" />
                     </div>
 
-                    {/* Mobile Menu Button (Appears Below 768px) */}
                     <div
                         className={styles.mobileMenu}
                         onClick={() => setMenuOpen(!menuOpen)}
@@ -74,8 +68,6 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Mobile Navigation Menu (Appears on Click) */}
 
             <div
                 ref={menuRef}

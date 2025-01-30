@@ -29,7 +29,6 @@
     height: 44px;
 }
 
-/* Desktop Nav (Hidden on Mobile) */
 .nav {
     display: flex;
     justify-content: center;
@@ -48,8 +47,8 @@
 }
 @media (max-width: 1400px) {
     .container {
-        width: 90%; /* ✅ Reduce width for spacing */
-        margin: 0 auto; /* ✅ Ensure it stays centered */
+        width: 90%;
+        margin: 0 auto;
     }
 }
 
@@ -74,7 +73,6 @@
     transition: 0.2s ease-in-out;
 }
 
-/* Hides Nav on Mobile */
 @media (max-width: 768px) {
     .nav {
         display: none;
@@ -84,9 +82,6 @@
         display: flex !important;
     }
 }
-
-/* Mobile Menu Icon */
-/* Menu Icon (Mobile) */
 .mobileMenu {
     display: none;
     width: 44px;
@@ -99,7 +94,6 @@
     transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-/* Hover Effect (Same as Bag & User Icons) */
 .mobileMenu:hover {
     background-color: #93a27c;
 }
@@ -115,7 +109,7 @@
 
 .mobileNav {
     position: fixed;
-    bottom: -100%; /* Hidden initially */
+    bottom: -100%;
     left: 0;
     width: 100%;
     background: white;
@@ -126,12 +120,10 @@
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Open State (Slide Up) */
 .mobileNav.open {
     bottom: 0;
 }
 
-/* Mobile Menu Items */
 .mobileNav ul {
     list-style: none;
     padding: 0;
@@ -150,13 +142,12 @@
     font-family: "Open Sans", sans-serif;
 }
 
-/* Icons Section */
 .icons {
     display: flex;
     align-items: center;
-    justify-content: center; /* Ensures perfect centering */
-    gap: 10px; /* Adjusted for uniform spacing */
-    width: auto; /* Remove fixed width */
+    justify-content: center;
+    gap: 10px;
+    width: auto;
 }
 
 .iconWrapper {
@@ -171,12 +162,10 @@
     transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-/* Remove margin inconsistencies */
 .iconWrapper:not(:last-child) {
     margin-right: 0;
 }
 
-/* Hover effect */
 .iconWrapper:hover {
     background-color: #93a27c;
 }

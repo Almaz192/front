@@ -1,6 +1,6 @@
 .card {
     width: 100%;
-    max-width: 300px; /* Adjust width */
+    max-width: 300px;
     border-radius: 18px;
     overflow: hidden;
     position: relative;
@@ -39,9 +39,6 @@
     font-family: "Montserrat Alternates", sans-serif;
 }
 
-/* ✅ Fix button alignment */
-
-/* ✅ Ensure circular arrow */
 .buttonContainer {
     width: 100%;
 }

@@ -1,22 +1,22 @@
 .hero {
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full screen height */
+    width: 100vw;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Ensures it sticks to viewport */
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: left;
-    overflow: hidden; /* Prevents unwanted scrolling */
+    overflow: hidden;
 }
 body,
 html {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; /* Prevents horizontal scroll */
+    overflow-x: hidden;
 }
 .overlay {
     width: 100%;

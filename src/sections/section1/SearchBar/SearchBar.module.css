@@ -2,15 +2,14 @@
     display: flex;
     align-items: center;
     gap: 30px;
-    justify-content: flex-start; /* Keep left alignment */
+    justify-content: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 650px; /* Ensures both elements have the same width */
+    max-width: 650px;
 }
 
-/* ✅ Input Field */
 .searchInput {
-    flex: 1; /* Allows it to stretch */
+    flex: 1;
     padding: 10px 15px;
     border: 3px solid transparent;
     font-family: "Open Sans", sans-serif;
@@ -19,29 +18,27 @@
     outline: none;
     transition: border-color 0.3s ease-in-out;
     text-align: left;
-    width: 100%; /* Ensures it stretches */
+    width: 100%;
 }
 
 .searchInput:focus {
     border-color: #93a27c;
 }
 
-/* ✅ Button */
 .searchButton {
-    flex: 1; /* Allows it to stretch */
+    flex: 1;
     padding: 10px 15px;
     border-radius: 12px;
     font-size: 16px;
-    width: 100%; /* Ensures it stretches */
+    width: 100%;
 }
 
-/* ✅ Ensure Both Have the Same Size */
 @media (max-width: 842px) {
     .searchContainer {
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
-        max-width: 300px; /* Keep everything aligned */
+        max-width: 300px;
         gap: 10px;
     }
 
@@ -65,6 +62,6 @@
     }
     .searchButton {
         width: 100%;
-        max-width: 300px; /* Ensures same width */
+        max-width: 300px;
     }
 }
