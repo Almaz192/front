@@ -3,18 +3,19 @@ import styles from "./Button.module.css";
 import ArrowIcon from "../../assets/images/Arrow.png";
 
 const Button = ({ label, onClick, className }) => {
-    // Combine all classNames properly
-    const buttonClassNames = [styles.button];
-
-    if (className?.includes("roundedButton"))
-        buttonClassNames.push(styles.roundedButton);
-    if (className?.includes("gapButton"))
-        buttonClassNames.push(styles.gapButton);
-
     return (
-        <button className={buttonClassNames.join(" ")} onClick={onClick}>
+        <button
+            className={`${styles.button} ${
+                className === "roundedButton" ? styles.roundedButton : ""
+            }`}
+            onClick={onClick}
+        >
             {label}
-            <div className={styles.arrowContainer}>
+            <div
+                className={`${styles.arrowContainer} ${
+                    className === "roundedButton" ? styles.roundedArrow : ""
+                }`}
+            >
                 <img src={ArrowIcon} alt="Arrow Icon" />
             </div>
         </button>

@@ -1,0 +1,84 @@
+.button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 20px;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* ✅ Properly positions the arrow */
+.button .arrowContainer {
+    width: 40px;
+    height: 40px;
+    background-color: #93a27c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: auto; /* Automatically pushes it to the end */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.arrowContainer {
+    margin-right: -15px;
+}
+
+.button .arrowContainer img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    opacity: 1;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* ✅ Ensure correct alignment with padding fixes */
+.button span {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* ✅ Hover Effects */
+.button:hover {
+    background-color: #93a27c;
+    color: white;
+}
+
+.button:hover .arrowContainer {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.button:hover .arrowContainer img {
+    filter: brightness(0) invert(0);
+    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+    .button {
+        font-size: 11px; /* ✅ Decreased button text size */
+        padding: 0 15px;
+    }
+
+    .arrowContainer {
+        width: 35px;
+        height: 35px;
+        margin-right: -10px;
+    }
+}
+@media (max-width: 430px) {
+    .button {
+        font-size: 8px;
+        padding: 0 15px;
+    }
+}

@@ -1,8 +1,17 @@
+/* ✅ Wrapper for consistent alignment */
+.wrapper {
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 5vw; /* Dynamic padding to ensure alignment with screen size */
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
 .cardSection {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
-    padding: 60px 5%;
-    background-color: #faf5f1; /* ✅ Corrected Background Color */
+    padding: 60px 0; /* Padding adjusted, no extra space on sides */
+    background-color: #faf5f1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,19 +20,21 @@
 }
 
 .sectionTitle {
-    font-size: 3.125rem;
+    font-size: 3.5rem;
     font-weight: 700;
     font-family: "Montserrat Alternates", sans-serif;
     text-align: left;
-    width: 73%;
-    margin-bottom: 40px;
+    width: 100%;
+    max-width: 1400px;
+    margin-bottom: 30px;
+    word-wrap: break-word;
 }
+
 .sectionTitle span {
     color: #b28b5b;
     font-weight: 600;
 }
 
-/* ✅ Flexbox for Desktop */
 .cardContainer {
     display: flex;
     justify-content: space-between;
@@ -33,17 +44,43 @@
     max-width: 1400px;
 }
 
-/* ✅ Grid Layout for Mobile */
-@media (max-width: 768px) {
+/* Responsive Grid Fix */
+@media (max-width: 1400px) {
     .cardContainer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .cardSection {
+        padding: 40px 5vw; /* Matching padding for consistency */
+    }
+}
+
+@media (max-width: 768px) {
+    .cardContainer {
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
-        justify-content: center;
+        max-width: 90%;
+    }
+
+    .cardSection {
+        padding: 30px 4vw;
     }
 
     .sectionTitle {
         font-size: 2rem;
-        text-align: left;
+    }
+}
+
+@media (max-width: 426px) {
+    .button {
+        font-size: 12px; /* ✅ Decreased font size for "Подробнее" */
+        padding: 0 10px; /* Adjust padding to fit smaller text */
+    }
+
+    .button .arrowContainer {
+        width: 35px;
+        height: 35px;
     }
 }

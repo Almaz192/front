@@ -15,15 +15,21 @@ const section3 = () => {
     ];
 
     return (
-        <section className={styles.cardSection}>
-            <h2 className={styles.sectionTitle}>
-                Просмотр товаров
-                <br /> по <span>категориям</span>
-            </h2>
-            <div className={styles.cardContainer}>
-                {cards.map((card, index) => (
-                    <Card key={index} image={card.image} title={card.title} />
-                ))}
+        <section className="wrapper">
+            <div className={styles.cardSection}>
+                <h2 className={styles.sectionTitle}>
+                    Просмотр товаров <br />
+                    по <span>категориям</span>
+                </h2>
+                <div className={styles.cardContainer}>
+                    {cards.map((card, index) => (
+                        <Card
+                            key={index}
+                            image={card.image}
+                            title={card.title}
+                        />
+                    ))}
+                </div>
             </div>
         </section>
     );

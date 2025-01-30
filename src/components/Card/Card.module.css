@@ -40,35 +40,18 @@
 }
 
 /* ✅ Fix button alignment */
-.cardButton {
-    width: 100%; /* ✅ Button stretches across */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 /* ✅ Ensure circular arrow */
-.cardButton .arrowContainer {
-    width: 40px;
-    height: 40px;
-    background-color: #93a27c;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    transition: background-color 0.3s ease-in-out;
+.buttonContainer {
+    width: 100%;
 }
-
-.cardButton span {
-    flex-grow: 1;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 600;
+@media (max-width: 768px) {
+    .cardTitle {
+        font-size: 1.1rem;
+    }
 }
-
-.cardButton img {
-    width: 16px;
-    height: 16px;
-    filter: brightness(0) invert(1);
+@media (max-width: 538px) {
+    .cardTitle {
+        font-size: 0.9rem;
+    }
 }

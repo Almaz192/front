@@ -14,12 +14,11 @@
     font-family: "Montserrat", sans-serif;
     width: fit-content;
     height: 48px;
-    min-width: 260px;
+
     display: flex;
     flex-direction: row;
     gap: 10px;
     text-align: left;
-    max-width: 230px;
 }
 
 /* ✅ Default Arrow */
@@ -33,7 +32,7 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added smooth transition */
 }
 
 /* ✅ Arrow Image Transition */
@@ -43,24 +42,19 @@
     object-fit: contain;
     opacity: 1;
     filter: brightness(0) invert(1);
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transition for image */
 }
 
-/* ✅ Rounded Button */
+/* ✅ Rounded Arrow & Button ONLY for Section2 */
 .roundedButton {
     border-radius: 28px !important;
     padding: 0 24px;
 }
 
-/* ✅ Rounded Arrow */
-.roundedButton .arrowContainer {
+/* ✅ Rounded Arrow ONLY for Section2 */
+.roundedArrow {
     border-radius: 50% !important;
     margin-right: -17px !important;
-}
-
-/* ✅ Extra Gap Between Text & Arrow */
-.gapButton {
-    gap: 70px !important; /* More space between text & arrow */
 }
 
 /* ✅ Hover Effect with Smooth Transition */
@@ -72,24 +66,17 @@
 /* ✅ Smooth Hover Animation for Arrow */
 .button:hover .arrowContainer {
     background-color: white;
-    transform: scale(1.1);
+    transform: scale(1.1); /* Slightly enlarges the arrow container */
 }
 
 .button:hover .arrowContainer img {
     filter: brightness(0) invert(0);
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Rotates the arrow smoothly */
 }
 
 @media (max-width: 768px) {
     .button {
-        width: 100% !important; /* ✅ Makes the button fill the card width */
-        max-width: unset; /* ✅ Removes max-width restriction */
-        height: 50px; /* ✅ Adjust height for better appearance */
-        justify-content: center; /* ✅ Centers text & arrow */
-    }
-
-    .button .arrowContainer {
-        position: absolute; /* ✅ Keeps arrow aligned */
-        right: 10px; /* ✅ Moves arrow to right edge */
+        width: 100%;
+        max-width: 400px;
     }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Card.module.css";
-import Button from "../Button1/Button";
+import Button2 from "../Button2/Button2";
 
 const Card = ({ image, title }) => {
     return (
@@ -8,12 +8,9 @@ const Card = ({ image, title }) => {
             <img src={image} alt={title} className={styles.cardImage} />
             <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>{title}</h3>
-                {/* ✅ Stretch Button */}
+                {/* ✅ Button2 Component */}
                 <div className={styles.buttonContainer}>
-                    <Button
-                        label="Подробнее"
-                        className="roundedButton gapButton"
-                    />
+                    <Button2 label="Подробнее" />
                 </div>
             </div>
         </div>
