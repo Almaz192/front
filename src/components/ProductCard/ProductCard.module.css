@@ -1,0 +1,96 @@
+.card {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.weight {
+    color: #858585;
+}
+button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.priceRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+.productImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cardContent {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.productTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.productWeight {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.productPrice {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4b3621;
+    margin-bottom: 10px;
+}
+
+.counter {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.counter button {
+    color: #858585;
+}
+
+.counter input {
+    width: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+.counterButton {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+
+    font-size: 1rem;
+    cursor: pointer;
+}
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+.inpt {
+    border: none;
+    outline: none;
+    color: #858585;
+}
+.butt {
+    border: none;
+    background-color: transparent;
+}

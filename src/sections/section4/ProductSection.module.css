@@ -1,0 +1,91 @@
+.section {
+    width: 100%;
+    padding: 60px 5%;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    box-sizing: border-box;
+}
+.topContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.buttonWrapper {
+    min-width: 190px;
+    max-width: 250px; /* Limits the button width */
+}
+
+.buttonWrapper button {
+    width: 100%; /* Makes the button responsive within its container */
+}
+
+.sectionTitle {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.sectiontopTitle {
+    color: #93a27c;
+    font-size: 1.2rem;
+}
+
+.productGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.productCard {
+    flex: 1 1 calc(25% - 20px);
+    min-width: 250px;
+    max-width: 300px;
+}
+
+/* Responsive Design for Different Resolutions */
+@media (max-width: 1200px) {
+    .productCard {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .topContainer {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .sectionTitle {
+        font-size: 2.5rem;
+    }
+
+    .productCard {
+        flex: 1 1 calc(50% - 10px); /* Ensures 2 cards per row under 768px */
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 585px) {
+    .productGrid {
+        justify-content: center; /* Center cards if extra space */
+    }
+
+    .productCard {
+        flex: 1 1 calc(50% - 10px); /* 2 cards per row under 585px */
+        min-width: 150px; /* Reduce minimum width for better fit */
+        max-width: 200px;
+    }
+}
